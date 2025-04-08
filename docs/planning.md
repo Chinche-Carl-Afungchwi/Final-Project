@@ -154,7 +154,7 @@ Message {
 ---
 
 
-## 🧾 Conclusion
+## Conclusion
 
 "**Under Belle**" delivers a meaningful and engaging way for users to receive anonymous feedback or confessions in a clean, secure, and social-friendly format. 
 With features like login-based dashboards, public message links, and shareable JPG message cards, the app balances technical soundness with real-world usability.
