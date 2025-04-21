@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #4B0056;
+  --color-secondary: #F9AF1C;
+  --color-accent: #85286F;
+}
