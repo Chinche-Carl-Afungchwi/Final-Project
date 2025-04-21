@@ -21,7 +21,7 @@ const MessagesPage = () => {
 
   const fetchMessages = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/messages/${slug}`);
+      const res = await axios.get(`https://underbelle-backend.onrender.com/api/messages/${slug}`);
       setMessages(res.data);
     } catch (err: any) {
       console.error(err);
@@ -33,7 +33,7 @@ const MessagesPage = () => {
 
   const handleDeleteMessage = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/messages/${id}`, {
+      await axios.delete(`https://underbelle-backend.onrender.com/api/messages/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessages((prev) => prev.filter((msg) => msg.id !== id));

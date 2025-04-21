@@ -15,7 +15,7 @@ const LeaveMessage = () => {
   useEffect(() => {
     const fetchCreator = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/links/${slug}`);
+        const res = await axios.get(`https://underbelle-backend.onrender.com/api/links/${slug}`);
         setCreatorName(res.data.username || 'the creator');
       } catch (err) {
         console.error(err);
@@ -34,7 +34,7 @@ const LeaveMessage = () => {
 
     try {
       setSubmitting(true);
-      await axios.post(`http://localhost:5000/api/messages/${slug}`, {
+      await axios.post(`https://underbelle-backend.onrender.com/api/messages/${slug}`, {
         content: message,
       });
       setStatus('✅ Message sent successfully!');

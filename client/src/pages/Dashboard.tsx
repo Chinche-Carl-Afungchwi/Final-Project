@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   const handleCreateLink = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/links', {}, {
+      const res = await axios.post('https://underbelle-backend.onrender.com/api/links', {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
   const handleDelete = async (linkId: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/links/${linkId}`, {
+      await axios.delete(`https://underbelle-backend.onrender.com/api/links/${linkId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessageLinks(prev => prev.filter(link => link.id !== linkId));
@@ -55,7 +55,7 @@ const Dashboard = () => {
 
   const fetchLinks = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/links/my', {
+      const res = await axios.get('https://underbelle-backend.onrender.com/api/links/my', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const linksWithMessages = res.data.map((link: Link) => ({
