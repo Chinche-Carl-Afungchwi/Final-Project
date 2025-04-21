@@ -1,4 +1,4 @@
-// src/pages/Dashboard.tsx
+
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
@@ -17,6 +17,11 @@ const Dashboard = () => {
   const [messageLinks, setMessageLinks] = useState<Link[]>([]);
   const { token, logout } = useAuth();
 
+  const baseUrl =
+    import.meta.env.MODE === 'production'
+      ? 'https://underbelle.vercel.app'
+      : 'http://localhost:5173';
+
   const handleCreateLink = async () => {
     try {
       const res = await axios.post('https://underbelle-backend.onrender.com/api/links', {}, {
@@ -24,7 +29,7 @@ const Dashboard = () => {
       });
 
       const newLink: Link = { ...res.data, messages: [] };
-      const fullLink = `http://localhost:5173/leave/${newLink.slug}`;
+      const fullLink = `${baseUrl}/leave/${newLink.slug}`;
       setMyLink(fullLink);
       setMessageLinks(prev => [newLink, ...prev]);
     } catch (err) {
@@ -109,7 +114,7 @@ const Dashboard = () => {
         <h3 className="text-xl font-semibold mt-10">Your Links</h3>
         <div className="space-y-3 max-w-xl mx-auto">
           {messageLinks.map((link) => {
-            const fullLink = `http://localhost:5173/leave/${link.slug}`;
+            const fullLink = `${baseUrl}/leave/${link.slug}`;
             return (
               <div key={link.id} className="border p-3 rounded flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div className="text-sm break-all">
