@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
@@ -116,7 +115,10 @@ const Dashboard = () => {
           {messageLinks.map((link) => {
             const fullLink = `${baseUrl}/leave/${link.slug}`;
             return (
-              <div key={link.id} className="border p-3 rounded flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div
+                key={link.id}
+                className="border p-3 rounded flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
+              >
                 <div className="text-sm break-all">
                   <a
                     href={`/messages/${link.slug}`}
@@ -126,13 +128,19 @@ const Dashboard = () => {
                   </a>
                   <span className="ml-2 text-xs text-gray-300">({link.messages.length} messages)</span>
                 </div>
-                <div className="flex gap-2 justify-end">
+                <div className="flex flex-wrap gap-2 justify-end">
                   <button
                     onClick={() => handleCopy(fullLink)}
                     className="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded"
                   >
-                    Copy
+                    Copy Link
                   </button>
+                  <a
+                    href={`/messages/${link.slug}`}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                  >
+                    View Messages
+                  </a>
                   <button
                     onClick={() => handleDelete(link.id)}
                     className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
