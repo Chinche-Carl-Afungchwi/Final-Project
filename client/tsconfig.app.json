@@ -23,7 +23,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["react", "react-dom", "node"]
   },
   "include": ["src"]
 }
