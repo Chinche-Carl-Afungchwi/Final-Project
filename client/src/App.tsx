@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import MessagesPage from './pages/MessagesPage';
 import RegisterSuccess from './pages/RegisterSuccess';
 import ProtectedRoute from './components/ProtectedRoute';
+import TermsPage from './pages/TermsPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/leave/:slug" element={<LeaveMessage />} />
       <Route path="/register-success" element={<RegisterSuccess />} />
+      <Route path="/terms" element={<TermsPage />} />
 
       {/* Protected Routes */}
       <Route

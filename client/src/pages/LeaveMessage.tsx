@@ -73,6 +73,18 @@ const LeaveMessage = () => {
           >
             {submitting ? 'Sending...' : 'Send'}
           </button>
+
+          <p className="text-center text-xs text-white mt-4">
+            By submitting, you agree to our{' '}
+            <a
+              href="/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-yellow-300 hover:text-yellow-400"
+            >
+              Terms and Conditions
+            </a>
+          </p>
         </form>
       </div>
     </MainLayout>

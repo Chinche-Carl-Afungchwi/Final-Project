@@ -1,20 +1,20 @@
 // src/pages/Register.tsx
-import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
-import MainLayout from '../layouts/MainLayout';
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
+import MainLayout from "../layouts/MainLayout";
 
 const Register = () => {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -22,7 +22,7 @@ const Register = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     if (form.password !== form.confirmPassword) {
       setError("Passwords do not match");
@@ -30,18 +30,21 @@ const Register = () => {
     }
 
     try {
-      const res = await axios.post('https://underbelle-backend.onrender.com/api/auth/register', {
-        username: form.username,
-        email: form.email,
-        password: form.password,
-      });
+      const res = await axios.post(
+        "https://underbelle-backend.onrender.com/api/auth/register",
+        {
+          username: form.username,
+          email: form.email,
+          password: form.password,
+        }
+      );
 
-      localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', JSON.stringify(res.data.user));
+      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      navigate('/register-success');
+      navigate("/register-success");
     } catch (err: any) {
-      const msg = err?.response?.data?.message || 'Registration failed';
+      const msg = err?.response?.data?.message || "Registration failed";
       setError(msg);
     }
   };
@@ -90,10 +93,15 @@ const Register = () => {
           {error && <p className="text-sm text-red-400">{error}</p>}
 
           <p className="text-sm text-white">
-            By clicking Sign Up, you agree to our{' '}
-            <Link to="#" className="underline text-[var(--color-secondary)]">
+            By clicking Sign Up, you agree to our{" "}
+            <a
+              href="/terms"
+              className="underline text-yellow-300 hover:text-yellow-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Terms and Conditions
-            </Link>
+            </a>
           </p>
 
           <button
