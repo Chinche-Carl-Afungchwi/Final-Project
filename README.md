@@ -117,10 +117,6 @@ npm run dev
 
 ---
 
-##  License
 
-MIT
-
----
 
 **Made by Chinche Carl Afungchwi**
