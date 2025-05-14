@@ -69,21 +69,19 @@ Final-Project/
 ## Deployment Instructions
 
 ### Frontend (Vercel)
-1. Push `client/` to GitHub.
-2. Connect your GitHub repo to [Vercel](https://vercel.com).
-3. During setup:
+1. Connect your GitHub repo to [Vercel](https://vercel.com).
+2. During setup:
    - Set root directory to `client`
    - Framework: `Vite`
    - Environment Variables 
 
 ### Backend (Render)
-1. Push `server/` to GitHub.
-2. Create a PostgreSQL database on Render.
-3. Create a new web service:
+1. Create a PostgreSQL database on Render.
+2. Create a new web service:
    - Root directory: `server`
    - Build Command: `npm install && npx prisma generate && tsc`
    - Start Command: `node dist/index.js`
-4. Add `.env` variables:
+3. Add `.env` variables:
    - `DATABASE_URL` (from Render DB)
    - `JWT_SECRET` (your secure key)
 
