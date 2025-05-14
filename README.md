@@ -1,50 +1,49 @@
+# UnderBelle – Anonymous Message Platform
 
-# UnderBelle – Your Anonymous Message Hub
-
-UnderBelle is a modern full-stack web application that allows users to receive anonymous messages from friends and followers through shareable links. The platform is built with React and Node.js and leverages PostgreSQL for data persistence. It features real-time link generation, message handling, user authentication with JWT, and an intuitive UI optimized for desktop and mobile views.
-
-## Live App
-
-- **Frontend (Vercel):** [https://underbelle.vercel.app](https://underbelle.vercel.app)
-- **Backend (Render):** [https://underbelle-backend.onrender.com](https://underbelle-backend.onrender.com)
+UnderBelle is a responsive full-stack web application that allows users to receive **anonymous messages** through unique, shareable links. Built with modern technologies like React, Express, and PostgreSQL, it offers secure authentication, dynamic message handling, and a clean user experience optimized for mobile and desktop users alike.
 
 ---
 
-## Features
+##  Live Demo
 
-- User registration and login with JWT authentication
-- Secure anonymous messaging with dynamic shareable links
-- View and moderate received messages (delete/export)
-- Copy and manage personal message links
-- Responsive UI with mobile menu and dark theme
-- Export messages to JPG with styled watermark
-- Deployment ready for Vercel (frontend) and Render (backend)
+- **Frontend (Vercel)**: [https://underbelle.vercel.app](https://underbelle.vercel.app)
+- **Backend (Render)**: [https://underbelle-backend.onrender.com](https://underbelle-backend.onrender.com)
 
 ---
 
-## Technologies Used
+##  Key Features
+
+-  **User Authentication**: Secure JWT-based registration and login
+-  **Link Generation**: Users create unique links to receive anonymous messages
+-  **Anonymous Messaging**: Visitors can send messages without an account
+-  **Dashboard**: View message links, copy them, and moderate received messages
+-  **Moderation Tools**: Delete messages or export them as JPG images
+-  **Responsive Design**: Mobile-first UI with dark mode and collapsible navigation
+-  **Cloud Deployed**: Live frontend on Vercel, backend and database hosted on Render
+
+---
+
+##  Technologies
 
 ### Frontend
-- Vite + React + TypeScript
-- TailwindCSS
-- React Router DOM
-- Axios
+- React + Vite + TypeScript
+- Tailwind CSS for styling
+- Axios for API calls
+- html2canvas for image export
 
 ### Backend
-- Node.js + Express
-- TypeScript
-- Prisma ORM
-- PostgreSQL (hosted on Render)
-- JWT for authentication
-- Dotenv for environment variables
+- Node.js + Express + TypeScript
+- Prisma ORM with PostgreSQL
+- JWT authentication middleware
+- Dotenv for configuration
 
 ---
 
-##  Folder Structure
+##  Project Structure
 
 ```
 Final-Project/
-├── client/          # Frontend source code
+├── client/                  # Frontend (Vite + React)
 │   ├── public/
 │   └── src/
 │       ├── components/
@@ -52,7 +51,7 @@ Final-Project/
 │       ├── layouts/
 │       ├── pages/
 │       └── main.tsx
-├── server/          # Backend source code
+├── server/                  # Backend (Express + Prisma)
 │   ├── prisma/
 │   │   └── schema.prisma
 │   ├── src/
@@ -62,59 +61,60 @@ Final-Project/
 │   │   ├── prisma.ts
 │   │   └── index.ts
 │   └── .env
-```
+
 
 ---
 
-## Deployment Instructions
+##  How to Run Locally
 
-### Frontend (Vercel)
-1. Connect your GitHub repo to [Vercel](https://vercel.com).
-2. During setup:
-   - Set root directory to `client`
-   - Framework: `Vite`
-   - Environment Variables 
 
-### Backend (Render)
-1. Create a PostgreSQL database on Render.
-2. Create a new web service:
-   - Root directory: `server`
-   - Build Command: `npm install && npx prisma generate && tsc`
-   - Start Command: `node dist/index.js`
-3. Add `.env` variables:
-   - `DATABASE_URL` (from Render DB)
-   - `JWT_SECRET` (your secure key)
-
----
-
-## Installation (Local)
-
-```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/Chinche-Carl-Afungchwi/Final-Project
 
-# FRONTEND
+# Set up Frontend
 cd Final-Project/client
 npm install
 npm run dev
 
-# BACKEND
+# Set up Backend
 cd ../server
 npm install
 npx prisma generate
 npx prisma db push
 npm run dev
-```
+
 
 ---
 
-##  Testing
+## Deployment Steps
 
-- Manual testing of all user flows including login, link creation, message sending, moderation, and export.
-- Error handling is implemented for network and validation failures.
+### Frontend (Vercel)
+1. Import GitHub repo into [Vercel](https://vercel.com)
+2. Set root directory: `client`
+3. Choose framework: `Vite`
+4. Set environment variables if needed
+
+### Backend (Render)
+1. Create a PostgreSQL database via Render
+2. Deploy backend as a web service:
+   - Root: `server`
+   - Build: `npm install && npx prisma generate && tsc`
+   - Start: `node dist/index.js`
+3. Set required environment variables:
+   - `DATABASE_URL`
+   - `JWT_SECRET`
 
 ---
 
+## Testing & Quality
 
+- Fully tested user flows: login, registration, link generation, messaging, deletion, and export
+- Input validation and API error handling
+- Manual QA across desktop and mobile devices
 
-**Made by Chinche Carl Afungchwi**
+---
+
+##  Developer
+
+Made with care by **Chinche Carl Afungchwi**  
+Advanced Web Development @ Centria UAS – 2025
