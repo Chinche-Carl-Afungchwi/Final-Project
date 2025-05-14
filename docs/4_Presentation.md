@@ -75,22 +75,13 @@ Link: See [Phase 1 – Use Cases](underbelle_phase1_definition.md)
 
 ## Work Hours Log
 
-| Date       | Time | Task                              |
-|------------|------|-----------------------------------|
-| 2.4.2025   | 3h   | Defined use cases                 |
-| 4.4.2025   | 2h   | Built login form                  |
-| 6.4.2025   | 3h   | Created registration and auth     |
-| 9.4.2025   | 4h   | Set up backend API endpoints      |
-| 11.4.2025  | 3h   | Built dashboard UI                |
-| 13.4.2025  | 4h   | Integrated message submission     |
-| 15.4.2025  | 2h   | Setup Docker and PostgreSQL       |
-| 16.4.2025  | 2h   | Vercel and Render deployment      |
-| 17.4.2025  | 3h   | Final UI polish                   |
-| 18.4.2025  | 2h   | Export feature using html2canvas  |
-| 19.4.2025  | 3h   | User testing and feedback fixes   |
-| 20.4.2025  | 3h   | Message delete functionality      |
-| 21.4.2025  | 3h   | Final documentation               |
-| **Total**  | **63h** |                               |
+| Week | Date Range     | Hours | Activities                                      |
+|------|----------------|-------|-------------------------------------------------|
+| 1    | Apr 1 – Apr 8 | 10h    | Defined app scope, wrote user personas, use cases, created figma prototype |
+|2 | Apr 9 - Apr 16 | 30h | Building app components locally, creating static and styled front end|
+|3 | Apr 17 - Apr 21 | 30h | Implementing backend, rendering front front end dynamic, testing and deployment|
+|4 | May 9 - May 14 | 15h | Enhancing app and creating presentation |
+|**Total** | **85 hour** |
 
 ## 🪢 Presentation Link
 
