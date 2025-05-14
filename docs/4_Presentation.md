@@ -15,7 +15,7 @@ Target users include:
 
 ## Use Case Summary
 
-Link: See [Phase 1 – Use Cases](underbelle_phase1_definition.md)
+Link: See [Phase 1 – Use Cases]([underbelle_phase1_definition.md](https://github.com/Chinche-Carl-Afungchwi/Final-Project/blob/main/docs/1_Definition_and_Planning.md))
 
 | Use Case                                  | Implemented | Demonstration / Notes |
 |------------------------------------------|-------------|------------------------|
@@ -86,4 +86,4 @@ Link: See [Phase 1 – Use Cases](underbelle_phase1_definition.md)
 
 ## 🪢 Presentation Link
 
-**Presented live during lecture.**
+[**Underbelle App Presentation.**](https://youtu.be/jxYp6qsSkUA)
