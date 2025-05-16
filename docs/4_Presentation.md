@@ -87,4 +87,4 @@ Link: See [Phase 1 – Use Cases](https://github.com/Chinche-Carl-Afungchwi/Fina
 
 ## 🪢 Presentation Link
 
-[**Underbelle App Presentation.**]((https://youtu.be/swHtQUTPzr8))
+[https://youtu.be/swHtQUTPzr8](https://youtu.be/swHtQUTPzr8)
